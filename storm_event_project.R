@@ -61,15 +61,3 @@ gg <- ggplot() +
         axis.text = element_blank())
 
 ggp <- ggplotly(gg, tooltip = c("text"), width = 500, height = '100%')
-
-test <- paste(min(as.numeric(str_sub(master_dat$BEGIN_YEARMONTH, 1, 4))),max(as.numeric(str_sub(master_dat$BEGIN_YEARMONTH, 1, 4))))
-
-
-dates <- master_dat %>% 
-  select(YEAR) %>%
-  mutate(YEAR = as.numeric(YEAR),
-         FLAG = ifelse(YEAR %in% sort(unique(YEAR))[1:round(length(unique(YEAR))/2,0)],
-                       'period1','period2'))
-
-test <- paste(min(dates %>% filter(FLAG == 'period1') %>% select(YEAR)), max(dates %>% filter(FLAG == 'period1') %>% select(YEAR)), sep = "-")
-test2 <- paste(min(dates %>% filter(FLAG == 'period2') %>% select(YEAR)), max(dates %>% filter(FLAG == 'period2') %>% select(YEAR)), sep = "-")
