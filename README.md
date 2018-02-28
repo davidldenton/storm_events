@@ -2,4 +2,4 @@
 
 This R script downloads storm event data from the NOAA archive, divides it into chronological halves, and then plots a chloropleth map of the change in storm event frequency.
 
-More information can be found here: http://www.fishingwithdave.net/storm_events
+More information can be found here: https://www.fishingwithdave.net/post/storm_events
