@@ -25,6 +25,7 @@ percent_func <- function(x, digits = 1, format = 'f') {
   paste0(formatC(100 * x, format = format, digits = digits), "%")
 }
 
+
 dat <- master_dat %>% 
   select(YEAR, STATE, EVENT_ID) %>%
   filter(STATE %in% toupper(state.name)) %>%
